@@ -5,7 +5,11 @@
     "projects": {
         "Angular-learnjs-230924": {
             "projectType": "application",
-            "schematics": {},
+            "schematics": {
+                "@schematics/angular:component": {
+                    "export": true
+                }
+            },
             "root": "",
             "sourceRoot": "src",
             "prefix": "app",
