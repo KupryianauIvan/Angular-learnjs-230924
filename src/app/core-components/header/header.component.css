@@ -1,0 +1,9 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header-ico {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
