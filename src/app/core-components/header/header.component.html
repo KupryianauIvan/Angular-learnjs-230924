@@ -6,7 +6,16 @@
     >
         <mat-icon>menu</mat-icon>
     </button>
-    <img class="header-ico" src="{{ imgSrc }}" alt="" />
+    <img class="header-ico" [src]="imgSrc" alt="" />
+
+    <!-- TODO Binding we use to pass the values -->
+    <!-- Interpolation we use to show the executed value -->
+
+    <!--  <img class="header-ico"-->
+    <!--       [src]="imgSrc"-->
+    <!--       [style.width.px]="100"-->
+    <!--       alt=""-->
+    <!--  />-->
     <span>{{ title }}</span>
     <span class="example-spacer"></span>
     <button
