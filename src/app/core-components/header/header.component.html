@@ -3,7 +3,16 @@
         mat-icon-button
         class="example-icon"
         aria-label="Example icon-button with menu icon"
+        (click)="onClick($event)"
     >
+        <!--
+      (click)="onClick($event)"
+        |
+       button.addEventListener('click', ($event) => {
+        onClick($event);
+       });
+        -->
+
         <mat-icon>menu</mat-icon>
     </button>
     <img class="header-ico" [src]="imgSrc" alt="" />

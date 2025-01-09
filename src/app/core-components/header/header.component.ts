@@ -8,4 +8,9 @@ import { Component } from "@angular/core";
 export class HeaderComponent {
     title = "Angular-learnjs-230924";
     imgSrc = "../../favicon.ico";
+
+    onClick(event: Event) {
+        event.stopPropagation();
+        console.log("Clicked;", event);
+    }
 }
