@@ -5,6 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HeaderModule } from "./core-components/header/header.module";
+import { SidenavModule } from "./core-components/sidenav/sidenav.module";
 
 @NgModule({
     declarations: [AppComponent],
@@ -13,6 +14,7 @@ import { HeaderModule } from "./core-components/header/header.module";
         AppRoutingModule,
         BrowserAnimationsModule,
         HeaderModule,
+        SidenavModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

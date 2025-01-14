@@ -6,16 +6,18 @@
         (click)="onClick($event)"
     >
         <!--
-      (click)="onClick($event)"
-        |
-       button.addEventListener('click', ($event) => {
-        onClick($event);
-       });
+            (click)="onClick($event)"
+              |
+              V
+            button.addEventListener('click', ($event) => {
+              onClick($event);
+            });
         -->
 
         <mat-icon>menu</mat-icon>
     </button>
-    <img class="header-ico" [src]="imgSrc" alt="" />
+    <img class="header-ico" [src]="applicationConfig?.shopIconSrc" alt="" />
+    <!--    <img class="header-ico" [src]="(applicationConfig && applicationConfig.shopIconSrc)" alt="" />-->
 
     <!-- TODO Binding we use to pass the values -->
     <!-- Interpolation we use to show the executed value -->
@@ -25,7 +27,7 @@
     <!--       [style.width.px]="100"-->
     <!--       alt=""-->
     <!--  />-->
-    <span>{{ title }}</span>
+    <span>{{ applicationConfig?.title }}</span>
     <span class="example-spacer"></span>
     <button
         mat-icon-button

@@ -1,1 +1,32 @@
-<app-header></app-header>
+<!--<app-header [config]="applicationConfig" (menuClicked)="onMenuClick($event)"></app-header>-->
+
+<!-- (menuClicked)="onMenuClick($event)"
+        |
+        v
+      HeaderComponent.menuClicked.subscribe($event => {
+        onMenuClick($event);
+      })
+-->
+
+<!--<app-sidenav-->
+<!--  [isSidenavOpened]="isSidenavOpenedStore"-->
+<!--  (sideNavOpenedChange)="isSidenavOpenedStore = $event;"-->
+<!--&gt;</app-sidenav>-->
+
+<app-header
+    [applicationConfig]="applicationConfig"
+    (menuClicked)="sidenav.toggleSidenav()"
+></app-header>
+<app-sidenav #sidenav></app-sidenav>
+<!--<app-sidenav-->
+<!--  [(isSidenavOpened)] = isSidenavOpenedStore-->
+<!--&gt;</app-sidenav>-->
+
+<!--
+  Важное правило для two-way-binding
+  @Output должен называться точно также как и @Input
+  но с постфиксом change, example
+  @Input() isSidenavOpened = false;
+  @Output() isSidenavOpenedChange = new EventEmitter<Event>();
+
+ -->
